@@ -8,9 +8,9 @@
   <h1>Juego: Amigo Secreto</h1>
 
   <input type="text" id="amigo" placeholder="Escribe un nombre">
-  <button onclick="agregarAmigo()">Agregar</button>
-  <button onclick="sortearAmigo()">Sortear</button>
-  <button onclick="clean()">Reiniciar</button>
+  <button type="button" onclick="agregarAmigo()">Agregar</button>
+  <button type="button" onclick="sortearAmigo()">Sortear</button>
+  <button type="button" onclick="clean()">Reiniciar</button>
 
   <h3>Lista de amigos:</h3>
   <ul id="listaAmigos"></ul>
