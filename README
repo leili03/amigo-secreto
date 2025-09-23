@@ -1,4 +1,4 @@
-Este proyecto es una práctica de **lógica de programación en JavaScript**.
+Este proyecto es una práctica de >>lógica de programación en JavaScript<<
 
 Funcionalidades:
 - Agregar nombres de amigos a una lista.
@@ -11,20 +11,20 @@ Funcionalidades:
 - Reinicio del juego para comenzar de nuevo.
 
 Estructura del proyecto:
-- **index.html** -> Contiene la estructura principal (inputs, botones y lista).
-- **script.js** -> Contiene la lógica del sorteo y manejo de la lista.
-- **README.md** -> Documento explicativo del proyecto.
+- index.html -> Contiene la estructura principal (inputs, botones y lista).
+- script.js -> Contiene la lógica del sorteo y manejo de la lista.
+- README.md -> Documento explicativo del proyecto.
 
 Tecnologías utilizadas:
-- **HTML5** -> estructura de la página.
-- **CSS3** -> (opcional, para dar estilos si deseas).
-- **JavaScript (ES6)** -> lógica del programa.
+- HTML5 -> estructura de la página.
+- CSS3 -> (opcional, para dar estilos si deseas).
+- JavaScript -> lógica del programa.
 
 ¿Cómo usarlo?:
 1. Escribe un nombre en el campo de texto.
-2. Haz clic en **Agregar** para añadirlo a la lista.
-3. Repite hasta tener al menos **2 amigos**.
-4. Presiona **Sortear** para obtener un amigo secreto al azar.
-5. Si quieres reiniciar todo, usa el botón **Reiniciar**.
+2. Haz clic en "Agregar" para añadirlo a la lista.
+3. Repite hasta tener al menos 2 amigos.
+4. Presiona "Sortear" para obtener un amigo secreto al azar.
+5. Si quieres reiniciar todo, usa el botón "Reiniciar".
 
 Vista previa:
