@@ -25,36 +25,28 @@
       amigos = [];
       elegidos = [];
       document.getElementById("resultado").innerHTML = "";
-      actualizarLista();
+      listaAmigos();
     }
 
     function agregarAmigo() {
-      let input = document.getElementById("amigo");
-      let amigoNuevo = input.value.trim();
-
+      let amigoNuevo = document.getElementById("amigo").value;
       if (amigoNuevo === "") {
-        alert("Por favor, escribe un nombre");
-        return;
+        alert("Por favor, inserte un nombre");
+      } else {
+        amigos.push(amigoNuevo);
+        document.querySelector("#amigo").value = "";
       }
-      if (amigos.includes(amigoNuevo)) {
-        alert("Ese nombre ya fue agregado");
-        input.value = "";
-        return;
-      }
-
-      amigos.push(amigoNuevo);
-      input.value = "";
-      actualizarLista();
+      listaAmigos();
     }
 
-    function actualizarLista() {
-      let lista = document.getElementById("listaAmigos");
+    function listaAmigos() {
+      let lista = document.querySelector("#listaAmigos");
       lista.innerHTML = "";
-      amigos.forEach(nombre => {
-        let li = document.createElement("li");
-        li.textContent = nombre;
-        lista.appendChild(li);
-      });
+      for (let i = 0; i < amigos.length; i++) {
+        let amigoHTM = document.createElement("li");
+        amigoHTM.innerHTML = amigos[i];
+        lista.appendChild(amigoHTM);
+      }
     }
 
     function sortearAmigo() {
@@ -62,22 +54,12 @@
         alert("Necesitas al menos 2 amigos para sortear");
         return;
       }
-      if (elegidos.length === amigos.length) {
-        alert("Ya no hay más amigos disponibles");
+      let indice = Math.floor(Math.random() * amigos.length);
+      if (elegidos.length == amigos.length) {
+        alert("Ya no hay mas amigos para sortear");
         clean();
         return;
       }
-
-      let indice;
-      do {
-        indice = Math.floor(Math.random() * amigos.length);
-      } while (elegidos.includes(amigos[indice]));
-
-      let elegido = amigos[indice];
-      elegidos.push(elegido);
-      document.getElementById("resultado").innerHTML =
-        "🎉 Tu amigo secreto es: <b>" + elegido + "</b>";
-    }
-  </script>
-</body>
-</html>
+      if (elegidos.includes(amigos[indice])) {
+        return sortearAmigo();
+      } else {
